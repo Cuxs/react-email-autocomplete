@@ -8,7 +8,7 @@ export default class Email extends Component {
     this.state = {
       placeholder: props.placeholder,
       class: props.className,
-      value: '',
+      value: props.value,
       domains: props.domains ? props.domains : ['yahoo.com', 'hotmail.com', 'gmail.com', 'me.com', 'aol.com', 'mac.com', 'live.com', 'googlemail.com', 'msn.com', 'yahoo.com', 'facebook.com', 'verizon.net', 'outlook.com', 'icloud.com'], // Include important mail services
       suggestion: ''
     }

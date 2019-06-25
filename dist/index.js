@@ -84,7 +84,7 @@
       _this.state = {
         placeholder: props.placeholder,
         class: props.className,
-        value: '',
+        value: props.value,
         domains: props.domains ? props.domains : ['yahoo.com', 'hotmail.com', 'gmail.com', 'me.com', 'aol.com', 'mac.com', 'live.com', 'googlemail.com', 'msn.com', 'yahoo.com', 'facebook.com', 'verizon.net', 'outlook.com', 'icloud.com'], // Include important mail services
         suggestion: ''
       };
@@ -206,7 +206,7 @@
         return _react2.default.createElement(
           'div',
           { className: 'eac-wrapper' },
-          _react2.default.createElement('input', { autocapitalize: 'none', type: 'text', inputMode: 'email', id: 'eac-input', name: this.props.name, placeholder: this.state.placeholder, onBlur: this.props.onBlur, className: this.state.class, value: this.state.value, onChange: this.handleChange, onKeyUp: this.getSuggest, ref: function ref(input) {
+          _react2.default.createElement('input', { autoCapitalize: 'none', type: 'text', inputMode: 'email', id: 'eac-input', name: this.props.name, placeholder: this.state.placeholder, onBlur: this.props.onBlur, className: this.state.class, value: this.state.value, onChange: this.handleChange, onKeyUp: this.getSuggest, ref: function ref(input) {
               _this3.textHandler = input;
             } })
         );
