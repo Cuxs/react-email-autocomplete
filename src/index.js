@@ -5,10 +5,11 @@ import React, { Component } from 'react'
 export default class Email extends Component {
   constructor(props) {
     super(props)
+    console.log('props' , props);
     this.state = {
       placeholder: props.placeholder,
       class: props.className,
-      value: props.value,
+      value: props.value || '',
       domains: props.domains ? props.domains : ['yahoo.com', 'hotmail.com', 'gmail.com', 'me.com', 'aol.com', 'mac.com', 'live.com', 'googlemail.com', 'msn.com', 'yahoo.com', 'facebook.com', 'verizon.net', 'outlook.com', 'icloud.com'], // Include important mail services
       suggestion: ''
     }
@@ -105,9 +106,10 @@ export default class Email extends Component {
     }
   }
   render() {
+    console.log(this.state);
     return (
       <div className="eac-wrapper">
-        <input autoCapitalize="none" type="text" inputMode="email" id="eac-input" name={this.props.name} placeholder={this.state.placeholder} onBlur={this.props.onBlur} className={this.state.class} value={this.state.value} onChange={this.handleChange} onKeyUp={this.getSuggest} ref={(input) => { this.textHandler = input } } />
+        <input autoCapitalize="none" type="text" inputMode="email" id="eac-input" disabled={this.props.disabled} name={this.props.name} placeholder={this.state.placeholder} onBlur={this.props.onBlur} className={this.state.class} value={this.state.value} onChange={this.handleChange} onKeyUp={this.getSuggest} ref={(input) => { this.textHandler = input } } />
       </div>
     )
   }
