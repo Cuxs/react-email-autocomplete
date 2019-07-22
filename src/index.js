@@ -106,7 +106,6 @@ export default class Email extends Component {
     }
   }
   render() {
-    console.log(this.state);
     return (
       <div className="eac-wrapper">
         <input autoCapitalize="none" type="text" inputMode="email" id="eac-input" disabled={this.props.disabled} name={this.props.name} placeholder={this.state.placeholder} onBlur={this.props.onBlur} className={this.state.class} value={this.state.value} onChange={this.handleChange} onKeyUp={this.getSuggest} ref={(input) => { this.textHandler = input } } />
