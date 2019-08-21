@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 export default class Email extends Component {
   constructor(props) {
     super(props)
-    console.log('props' , props);
     this.state = {
       placeholder: props.placeholder,
       class: props.className,

@@ -81,7 +81,6 @@
 
       var _this = _possibleConstructorReturn(this, (Email.__proto__ || Object.getPrototypeOf(Email)).call(this, props));
 
-      console.log('props', props);
       _this.state = {
         placeholder: props.placeholder,
         class: props.className,
